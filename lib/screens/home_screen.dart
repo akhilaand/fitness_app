@@ -56,9 +56,12 @@ class Home extends StatelessWidget {
                           fontWeight: FontWeight.w700),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     Horizontal_Screen(),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Type_Of_Workout()
                   ],
                 ),

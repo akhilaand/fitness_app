@@ -5,5 +5,7 @@ class Type_Of_Workout_modal {
   final instructor;
   final time;
   final img;
-  Type_Of_Workout_modal({this.name, this.img, this.instructor, this.time});
+  final color;
+  Type_Of_Workout_modal(
+      {this.name, this.img, this.instructor, this.time, this.color});
 }
