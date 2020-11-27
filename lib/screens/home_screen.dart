@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:fitness_app/components/horizontal_screen.dart';
+import 'package:fitness_app/components/type_of_workout.dart';
 import 'package:fitness_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,8 @@ class Home extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
-                    Horizontal_Screen()
+                    Horizontal_Screen(),
+                    Type_Of_Workout()
                   ],
                 ),
               ),
