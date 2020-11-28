@@ -82,6 +82,9 @@ class Type_Of_Workout extends StatelessWidget {
                         horizontal: 10, vertical: 10),
                     child: Column(
                       children: [
+                        SizedBox(
+                          height: 5,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -92,10 +95,10 @@ class Type_Of_Workout extends StatelessWidget {
                                   style: TextStyle(
                                       color: white,
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 17.5),
+                                      fontSize: 16.5),
                                 ),
                                 SizedBox(
-                                  width: 5,
+                                  width: 10,
                                 ),
                                 Icon(
                                   Icons.arrow_forward_ios,
@@ -105,14 +108,98 @@ class Type_Of_Workout extends StatelessWidget {
                               ],
                             ),
                             Icon(
-                              Icons.star,
+                              Icons.stars_rounded,
                               color: yellow,
                             )
                           ],
                         ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              'Yoga coach  .  3 more lessons',
+                              style: TextStyle(
+                                  color: grey,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 11.5),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          child: Center(
+                            child: Text(
+                              'Let\'s Go',
+                              style: TextStyle(
+                                  color: white,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14.5),
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  blue_200,
+                                  blue_600,
+                                ],
+                                stops: [0.12, 0.85],
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20))),
+                          width: size.width,
+                          height: size.height * 0.07,
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.play_circle_fill,
+                                color: white,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'Preview',
+                                style: TextStyle(
+                                    color: white,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14.5),
+                              ),
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: lightBlack,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20))),
+                          width: size.width,
+                          height: size.height * 0.07,
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          ''' Yoga as exercise is a physical activity consisting largely of asanas, often connected by flowing sequences called vinyasas, sometimes accompanied by the breathing exercises of pranayama, and usually ending with a period of relaxation or meditation.''',
+                          style: TextStyle(
+                              color: grey,
+                              letterSpacing: 1,
+                              height: 1.5,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 11.5),
+                        )
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -150,63 +237,67 @@ class Type_Of_Workout extends StatelessWidget {
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Column(
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          workout[index].name,
-                          style: TextStyle(
-                              color: black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 30),
-                        ),
-                        SizedBox(
-                          height: 3,
-                        ),
-                        Text(
-                          'with ${workout[index].instructor}',
-                          style: TextStyle(
-                              color: Colors.grey.shade500,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 35,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              workout[index].name,
+                              style: TextStyle(
+                                  color: black,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 30),
+                            ),
+                            SizedBox(
+                              height: 3,
+                            ),
+                            Text(
+                              'with ${workout[index].instructor}',
+                              style: TextStyle(
+                                  color: Colors.grey.shade500,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15),
+                            ),
+                            SizedBox(
+                              height: 35,
+                            ),
+                            Container(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.play_arrow),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      workout[index].time,
+                                      style: TextStyle(
+                                          color: black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 15),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(25))),
+                            )
+                          ],
                         ),
                         Container(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
-                            child: Row(
-                              children: [
-                                Icon(Icons.play_arrow),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  workout[index].time,
-                                  style: TextStyle(
-                                      color: black,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 15),
-                                ),
-                              ],
-                            ),
-                          ),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(25))),
+                          height: 150,
+                          child: Image.asset(workout[index].img),
                         )
                       ],
                     ),
-                    Container(
-                      height: 150,
-                      child: Image.asset(workout[index].img),
-                    )
                   ],
                 ),
               ),
