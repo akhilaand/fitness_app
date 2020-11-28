@@ -1,16 +1,1 @@
-# fitness_app
-
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A fitness app which consist of two pages, home screen basically  consist of a horizontal scroll view where you can select fitness activity you are looking for.It also has an area where you can do the activity with an instructor. In bottom naviation bar there are four categories.Detail screen is made with bottom sheet where you can start your activity or preview the activity.It also conatain a description about the activity.
