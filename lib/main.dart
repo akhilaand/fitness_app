@@ -9,6 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Bottom_Navigation());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false, home: Bottom_Navigation());
   }
 }
